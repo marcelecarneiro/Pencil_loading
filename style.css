@@ -1,0 +1,247 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Handlee', cursive;
+    font-weight: 800;
+    text-align: center;  
+
+   
+    
+    
+}
+
+.teste {
+    
+    position: relative;
+    width: 89%;
+    height: 100%;
+    padding-left: 10%;
+    margin-top: -14%;
+}
+
+
+#box {
+    width: 400px;
+    height: 380px;
+    display: inline-block;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* alinha qualquer coisa no centro */
+   
+    
+}
+
+.center /*junta o lápis*/
+{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: rotate(-75deg);
+    animation:animate 6s linear infinite;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    z-index: 2;
+    
+}
+
+.pencil /*centro do lápis*/
+{
+    width: 200px;
+    height: 10px;
+    background: #ffc334;
+    border-top: 10px solid #ffd268;
+    border-bottom: 15px solid #e2af38;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+        
+}
+
+.pencil p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #d06500;
+
+}
+
+
+.pencil:before {
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: 0;
+    border-style: solid;
+    border-color: transparent #e29663 transparent transparent;
+    border-width: 17px 40px 18px;
+
+}
+
+.pencil:after {
+    content: '';
+    position: absolute;
+    left: -80px;
+    top: 0;
+    border-style: solid;
+    border-color: transparent #262626 transparent transparent;
+    border-width: 16px 40px 18px;
+    transform:scale(.3)
+}
+
+.eraser {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15px;
+    width: 24px;
+    background: #ccc;
+    border-top: 10px solid #dedede;
+    border-bottom: 10px solid #b9bfbf;
+    
+
+}
+
+.eraser:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -90%;
+    width: 143%;
+    height: 105%;
+    background: #d76f6e;
+    border-top: 9px solid #da8e8d;
+    border-bottom: 10px solid #c85957;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.line {
+    width: 397px;
+    height: 2px;
+    background: #000000; 
+    position: absolute;
+    top: 73.7%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    z-index: 1;
+    
+   
+}
+
+.line p {
+    width: 700px;
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, 30%);
+}
+
+
+.line:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation:animateline 6s linear infinite;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 107%;
+    height: 30px;
+    background: #fff;
+    animation:animateline 6s linear infinite;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    
+}
+
+
+
+@keyframes animate 
+{
+    0%
+    {
+        left: -18%;
+        transform: rotate(-75deg);
+        top: 50%;
+    }
+   
+    40%
+    {
+        transform: rotate(-75deg);
+        top: 50%;
+    }
+
+    50% 
+    {
+        left: 89%;
+        transform: rotate(110deg);
+        top: 54%;
+    }
+
+   
+   
+    90%
+    {
+        left: -18%;
+        transform: rotate(110deg);
+        top: 54%;
+
+    
+    }
+    100%
+    {
+        left: -20%;
+        transform: rotate(-75deg);
+        top: 50%;
+
+    
+    }
+}
+
+@keyframes animateline
+{
+    
+    0%
+    {
+        left: -2%;
+    }
+
+
+    
+
+50%
+    {
+        left: 104%;
+    }
+
+    90%
+    {
+        left: 0%;
+    }
+    100%
+    {
+        left: -5%;
+    }
+
+
+   
+    
+
+}
